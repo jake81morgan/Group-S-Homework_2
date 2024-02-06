@@ -11,7 +11,6 @@ public class StudentManager {
 	public boolean readFromFile(String fileName) {
 		
 		try {
-			
 			Scanner fileIn = new Scanner(new FileInputStream(fileName));
 			
 			// Counts number of students in file
@@ -47,5 +46,20 @@ public class StudentManager {
 			System.out.println("File not found.");
 			return false;
 		}
+		
+	}
+	
+	public void displayStudents() {
+		
+		// Tell user if no students exist
+		if(Students.length == 0) {
+			System.out.println("No students exist.");
+		}
+		
+		// Print all student objects using toString
+		for(Student student: Students) {
+			System.out.println(student);
+		}
+		
 	}
 }
