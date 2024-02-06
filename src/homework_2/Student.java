@@ -38,13 +38,12 @@ public class Student {//Create a student class with private of the following fie
 	public double getGrade() {
 		return this.grade;
 	}
-	
+
 	//Initialize a toString method to print out the student information
+	@Override
 	public String toString() {
-		String StringToPrint = "The Student has the id of: " + this.id + 
-				"\nThe Student has the Name of: " + this.name + 
-				"\nThe Student has the Grade of: " + this.grade;
-		return StringToPrint;
+		return "Student [id=" + id + ", name=" + name + ", grade=" + grade + "]";
 	}
+
 	
 }
