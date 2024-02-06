@@ -5,9 +5,9 @@ public class Main {
 //// Instantiate StudentManager, perform operations based on the requirements.
 		StudentManager studentManager = new StudentManager();
 //// Read student data from a file and initialize Student objects.
-//		boolean fileReadStatus = studentManager.readFromFile("studentData.txt");
+		boolean fileReadStatus = studentManager.readFromFile("studentData.txt");
 //// Display all students.
-//		studentManager.displayStudents();
+		studentManager.displayStudents();
 //// Search for a student by ID.
 //		boolean studentFound = studentManager.searchStudentById(101);
 //// Update the grade of a student by ID.
