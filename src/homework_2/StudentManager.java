@@ -62,4 +62,24 @@ public class StudentManager {
 		}
 		
 	}
+
+
+	public boolean searchStudentById(int search) {
+		
+		// Tell user if no students exist
+		if(Students.length == 0) {
+			System.out.println("No students exist.");
+			return false;
+		}
+		
+		//Check to see if specific student exist
+		for(Student student: Students ) {
+			if(student.getId() == search) {
+				return true;
+			}
+		}
+		
+		return false;
+		
+	}
 }
