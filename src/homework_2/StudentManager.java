@@ -43,7 +43,7 @@ public class StudentManager {
 
 		} catch (FileNotFoundException e) {
 			// Print error message and return false
-			System.out.println("File not found.");
+			System.out.println("File not found.\n");
 			return false;
 		}
 
@@ -52,28 +52,28 @@ public class StudentManager {
 	public void displayStudents() {
 
 		// Tell user if no students exist
-		if (Students.length == 0) {
-			System.out.println("No students exist.");
-		}
-
-		// Print all student objects using toString
-		for (Student student : Students) {
-			System.out.println(student);
+		if (Students == null || Students.length == 0) {
+			System.out.println("No students exist.\n");
+		} else {
+			// Print all student objects using toString
+			for (Student student : Students) {
+				System.out.println(student);
+			}
 		}
 
 	}
 
-	public boolean searchStudentById(int search) {
+	public boolean searchStudentById(int id) {
 
 		// Tell user if no students exist
-		if (Students.length == 0) {
-			System.out.println("No students exist.");
+		if (Students == null || Students.length == 0) {
+			System.out.println("No students exist.\n");
 			return false;
 		}
 
 		// Check to see if specific student exist
 		for (Student student : Students) {
-			if (student.getId() == search) {
+			if (student.getId() == id) {
 				return true;
 			}
 		}
